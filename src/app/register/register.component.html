@@ -1,0 +1,42 @@
+<div class="conatiner-main">
+
+
+    <div class="container-login">
+        <h1 class="text-center text-light mb-5">Register to FOODIES</h1>
+        <form #usersEmail="ngForm">
+
+            <div class="mb-4 form-group">
+                <label class="form-label text-light">Email address</label>
+                <input type="email" class="form-control" aria-describedby="emailHelp" [(ngModel)]="email" name="email"
+                    required #emailvalidator="ngModel"
+                    [class.invalidinput]="emailvalidator.touched && emailvalidator.invalid ">
+                <div *ngIf="emailvalidator.errors">
+                    <p class="text-light" *ngIf=" emailvalidator.touched && emailvalidator.errors['required']">Please
+                        enter email adress</p>
+
+                </div>
+            </div>
+
+            <div class="mb-4 form-group">
+                <label class="form-label text-light">Password</label>
+                <input type="password" class="form-control" [(ngModel)]="password" name="password"
+                    #passwordref="ngModel" [class.invalidinput]="passwordref.touched && passwordref.invalid" required>
+                <div *ngIf="passwordref.errors">
+                    <p class="text-light" *ngIf=" passwordref.touched && passwordref.errors['required']">Please
+                        enter Password</p>
+
+                </div>
+
+                <div class="form-text text-light my-3" (click)="tologin()" style="cursor: pointer;">Already have an
+                    account.<strong> Click here</strong></div>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" style="width: 100%;" (click)="register()">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>

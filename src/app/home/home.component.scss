@@ -1,0 +1,94 @@
+$white : #ffffff;
+$bgcolor : #fb3939;
+
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        list-style: none;
+    }
+}
+
+ul li a {
+    // height: 25rem;
+    width: 20rem;
+    border: 1px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    padding-bottom: .5rem;
+
+}
+
+ul li a img {
+    border-radius: .5rem;
+}
+
+.content {
+    padding: .5rem 1rem;
+    position: relative;
+}
+
+.favorite {
+    position: absolute;
+    top: .8rem;
+    right: .5rem;
+    font-size: 1.2rem;
+}
+
+.product-item-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .5rem auto;
+}
+
+.origins {
+    flex: 9;
+}
+
+.origins span {
+    background-color: whitesmoke;
+    color: #414141;
+    border-radius: .5rem;
+    display: inline-block;
+    padding: .1rem .5rem;
+    margin: .4rem;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-left: 0;
+}
+
+.cook-time {
+    font-size: .8rem;
+    flex: 3;
+    text-align: right;
+}
+
+.price {
+    color: #414141;
+
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+
+    .tabs-btn {
+        color: $white;
+        background-color: $bgcolor;
+        border-radius: .5rem;
+        padding: .4rem;
+        border: transparent;
+        margin: auto .5rem;
+        min-width: 5rem;
+        box-shadow: 0 2px 7px #c2bbbb;
+
+
+    }
+}

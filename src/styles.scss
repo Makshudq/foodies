@@ -1,0 +1,151 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+
+.fav {
+    color: red !important;
+}
+
+.not {
+    color: rgb(248, 235, 235) !important;
+}
+
+.invalidinput {
+    border: 1px solid red;
+    box-shadow: 0 0 6px red;
+}
+
+
+// foodservice component............
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+img {
+    min-width: 10rem;
+    max-width: 25rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    margin: 1rem;
+}
+
+.content-detail {
+    margin-left: 1rem;
+    max-width: 20rem;
+
+}
+
+.name-div {
+    display: flex;
+    justify-content: space-between;
+
+    span i {
+        position: static;
+    }
+}
+
+.name-div .favorite {
+    font-size: 1.5rem;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cook-time-page {
+    text-align: start;
+}
+
+.btn-to-cart {
+    width: 100%;
+}
+
+
+.cook-time-page {
+    font-size: 1rem;
+    margin: .5rem auto;
+    flex: 3;
+    text-align: start;
+}
+
+.price {
+    color: #198754;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+
+.price-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .5rem auto;
+}
+
+.tag {
+    background-color: rgb(246, 85, 85);
+    color: #ffffff;
+    border-radius: .5rem;
+    display: inline-block;
+    padding: .1rem .5rem;
+    margin: .4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 0;
+}
+
+
+
+// login/regiter page....
+
+@mixin gridCenter() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+@mixin card($color: pink) {
+    color: $color;
+    border: 1px solid $color;
+    box-shadow: 0 0 10px $color;
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+.container-login {
+    @include gridCenter()
+}
+
+h1 {
+    @include card($color: #fff)
+}
+
+
+.container-login {
+
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    padding: 1rem;
+    min-width: 20rem;
+    width: 35%;
+}
+
+.conatiner-main {
+    height: 100vh;
+}

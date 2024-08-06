@@ -1,0 +1,35 @@
+<div class="conatiner-main">
+
+
+    <div class="container-login">
+        <h1 class="text-center text-light mb-5">Login to FOODIES</h1>
+        <form>
+
+            <div class="mb-4">
+                <label for="exampleInputEmail1" class="form-label text-light">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    [(ngModel)]="email" name="email">
+
+            </div>
+            <div class="mb-4">
+                <label for="exampleInputPassword1" class="form-label text-light">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password"
+                    name="password">
+                <!-- <div class=" form-text text-light my-3">Already have an account.<strong> Click
+                    here</strong>
+            </div> -->
+                <div class="form-text text-light my-3" (click)="toRegister()" style="cursor: pointer;">Create new
+                    account.<strong> Click
+                        here</strong></div>
+                <!-- <div class="form-text text-light my-3" style="cursor: pointer;">Forget Password ?</div> -->
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" style="width: 100%;" (click)="login()">Login</button>
+            </div>
+
+
+        </form>
+    </div>
+
+
+</div>

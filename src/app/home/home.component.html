@@ -1,0 +1,54 @@
+<app-header></app-header>
+<!-- (searchinputdata)="childdata($event)" -->
+
+
+
+<div class="search row m-3">
+    <form class="d-flex col-5" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search food item" aria-label="Search"
+            [(ngModel)]="myProperty" name="search">
+        <button class="btn btn-outline-success" (click)="search()">Search</button>
+
+    </form>
+</div>
+
+<div class="tabs mt-5">
+    <button class="tabs-btn" (click)="tabselect('fastfood')">Fast Food</button>
+    <button class="tabs-btn" (click)="tabselect('pizza')">Pizza</button>
+    <button class="tabs-btn" (click)="tabselect('lunch')">Lunch</button>
+    <button class="tabs-btn" (click)="tabselect('fry')">Fry</button>
+    <button class="tabs-btn" (click)="tabselect('all')">All items</button>
+</div>
+<ul>
+    <li *ngFor="let fd of foodDetails">
+        <a href="" routerLink="/food/{{fd.id}}">
+            <img src={{fd.imgUrl}} alt="">
+
+            <div class="content">
+                <div class="name">
+                    {{fd.name}}
+                </div>
+                <span class="favorite {{fd.favorite? 'fav' : 'not'}}">
+                    <i class="bi bi-heart-fill"></i>
+                </span>
+
+                <div class="product-item-footer">
+                    <div class="origins">
+                        <span *ngFor="let origin of fd.origin">{{origin}}</span>
+                    </div>
+                    <div class="cook-time">
+                        <span>🕒</span> {{fd.cooktime}}
+
+                    </div>
+                </div>
+
+                <div class="price">
+                    <span>{{fd.price | currency}}</span>
+                </div>
+            </div>
+
+
+
+        </a>
+    </li>
+</ul>

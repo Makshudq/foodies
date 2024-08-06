@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm bg-body-secondary">
+    <div class="container-fluid">
+        <a class="navbar-brand text-danger fw-bold">Foodies</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+                </li>
+
+            </ul>
+            <!-- <form class="d-flex" role="search">
+                <input class="form-control me-2" name="input" type="search" placeholder="Search food item"
+                    aria-label="Search" [(ngModel)]="searchinput">
+
+                <button class="btn btn-outline-success" type="submit" (click)="searchheader()">Search</button>
+
+            </form> -->
+
+            <p class="text-danger m-1" (click)="logout()" style="cursor: pointer;">logout</p>
+
+            <span class="cart" routerLink="cart" style="cursor: pointer;"><i class="bi bi-cart4"></i>
+                <span class="position-absolute top-30 start-99 translate-middle badge rounded-pill text-success"
+                    style="font-size: 13px;">
+                    {{qty}}
+                </span>
+            </span>
+        </div>
+    </div>
+</nav>

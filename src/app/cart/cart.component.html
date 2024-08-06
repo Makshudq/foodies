@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <h1 class="text-center m-3 text-secondary">Your Cart</h1>
+</div>
+
+<div class="container-cart">
+
+
+    <div class="mid-container-cart" *ngFor="let fd of items ">
+        <img src={{fd.imgUrl}} alt="">
+
+        <div class="content-detail">
+            <div class="name-div">
+                <div class="name">
+                    {{fd.name}}
+                </div>
+                <span class="favorite {{fd.favorite? 'fav' : 'not'}}">
+                    <i class="bi bi-heart-fill"></i>
+                </span>
+
+            </div>
+
+            <div class="product-item-footer-page">
+                <div class="origins-page">
+                    <span class="tag" *ngFor="let origin of fd.origin">{{origin}}</span>
+                </div>
+                <div class="cook-time-page">
+                    Time to cook about <span>🕒</span> {{fd.cooktime}} minutes
+
+                </div>
+            </div>
+            <div class="price price-div">
+                <div>
+                    <span class="tag" *ngFor="let tag of fd.tag">{{tag}} </span>
+                </div>
+                <span class="price">{{fd.price | currency}}</span>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
